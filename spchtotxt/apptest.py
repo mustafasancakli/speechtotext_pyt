@@ -28,7 +28,7 @@ def recognize_speech():
         return""
     
 def speak(text):
-    tts = gTTS(text)
+    tts = gTTS(text, lang='tr')
     # Sesi geçici bir MP3 dosyası olarak kaydediyorum
     temp_audio = tempfile.NamedTemporaryFile(delete=False, suffix= '.mp3')
     tts.save(temp_audio.name)
